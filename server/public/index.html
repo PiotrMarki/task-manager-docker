@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lista przepisów</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <div class="container">
+    <h1>Przepiśnik</h1>
+
+    <div class="grid">
+      <section class="card">
+        <h2>Kategorie</h2>
+
+        <form id="catForm" class="row">
+          <input id="catName" placeholder="Nazwa kategorii" />
+          <button type="submit">Dodaj</button>
+        </form>
+
+        <ul id="catList" class="list"></ul>
+      </section>
+
+      <section class="card">
+        <h2>Przepisy</h2>
+
+        <form id="recipeForm" class="col">
+          <div class="row">
+            <input id="recipeTitle" placeholder="Nazwa przepisu" />
+            <select id="recipeCategory"></select>
+            <select id="recipeRating" title="Ocena">
+              <option value="1">1/5</option>
+              <option value="2">2/5</option>
+              <option value="3" selected>3/5</option>
+              <option value="4">4/5</option>
+              <option value="5">5/5</option>
+            </select>
+            <button type="submit">Dodaj</button>
+          </div>
+
+          <textarea id="recipeIngredients" placeholder="Składniki (np. jajka, mleko, mąka)"></textarea>
+          <textarea id="recipeInstructions" placeholder="Instrukcja przygotowania"></textarea>
+        </form>
+
+        <div class="row" style="margin-top:12px;">
+          <label>Filtr kategorii:</label>
+          <select id="filterCategory"></select>
+        </div>
+
+        <ul id="recipeList" class="list"></ul>
+      </section>
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
