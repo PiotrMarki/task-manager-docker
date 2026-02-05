@@ -34,3 +34,5 @@ Dane są przechowywane w relacyjnej bazie danych PostgreSQL.
 3. Uruchom polecenie:
    ```bash
    docker compose up --build
+4. Aplikacja zostanie uruchomiona na:
+   http://localhost:3000
